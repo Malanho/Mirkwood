@@ -50,7 +50,7 @@ public class Map extends Panel {
 		mRand = new Random();
 		
 		generateWater();
-		generateTrees();
+		//generateTrees();
 
 		land = new EmptySpace(new TextColor.RGB(165, 127, 61)) {
 			protected ComponentRenderer<EmptySpace> createDefaultRenderer() {
@@ -125,13 +125,6 @@ public class Map extends Panel {
 		}
 	}
 	
-	public void generateTrees() {
-		for (int i=0; i < TREECOUNT; i++)
-			treespos[i] = Tree.factoryRandomTree(COLUMNS, LINES);
-
-		for (int i=0; i < BRANCHESCOUNT; i++)
-			branchespos[i] = Tree.factoryRandomBranch(COLUMNS, LINES);
-	}
 
 	public void refreshLand() {
 		land.invalidate();

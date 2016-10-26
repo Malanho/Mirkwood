@@ -29,7 +29,7 @@ public class PanelMap extends Panel {
 
 		renderMap();
 
-		player = new Label("φ");
+		player = new Label("Ï†");
 		player.setForegroundColor(TextColor.ANSI.YELLOW);
 		player.setBackgroundColor(TextColor.ANSI.RED);
 
@@ -65,8 +65,8 @@ public class PanelMap extends Panel {
 
 	public void renderMap() {
 		Random r = new Random();
-		char[] stuff = new char[] { '¥', '±', 'š', 'Î', 'Ý', '¬', '¤' };
-		char[] trees = new char[] { '¥', 'Î', 'Ý' };
+		char[] stuff = new char[] { 'Â', '±', '¡', 'Ž', 'Ã', '¬', 'Â' };
+		char[] trees = new char[] { '¥', 'Ã', '�' };
 		for (int i = 0; i < 1000; i++) {
 			Label lbls = new Label(String.valueOf(stuff[r.nextInt(stuff.length)]));
 			Label lbl = new Label(String.valueOf(trees[r.nextInt(trees.length)]));
@@ -86,7 +86,7 @@ public class PanelMap extends Panel {
 		 * River
 		 */
 		int col = r.nextInt(COLUMNS);
-		char[] water = { '░', '▒', '▓' };
+		char[] water = { '-', '–', '–' };
 
 		for (int i = 0; i < LINES; i++) {
 			Label lbl = new Label(String.valueOf(water[2]));
