@@ -1,6 +1,7 @@
 package gui;
 
 import artefactos.LayerFoes;
+import artefactos.LayerOuro;
 import artefactos.LayerTrees;
 import artefactos.LayerWater;
 import artefactos.MapLayer;
@@ -63,13 +64,14 @@ public class Map extends Panel {
                 LayerFoes foes  = new LayerFoes();
                 //criar a layer new water
                 LayerWater water = new LayerWater();
+                LayerOuro ouro = new LayerOuro();
                 
                 layers = new ArrayList();
                 layers.add(trees);
                 layers.add(foes);
                 //criar a layer water
                 layers.add(water);
-                
+                layers.add(ouro);
                 
 		//generateTrees();
 

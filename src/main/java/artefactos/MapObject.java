@@ -19,7 +19,7 @@ public class MapObject {
     TextColor.RGB backgroundColor;
     
     boolean walkthrough = true;
-    
+    boolean visible = true;
     protected Random _rand;
     
     public MapObject() {
@@ -64,5 +64,12 @@ public class MapObject {
         this.walkthrough = walkthrough;
     }
     
+   public boolean isvisible(){
+       return visible;
+      
+   }
+    public void setVisible(boolean visible) {
+       this.visible = visible;
+   }
     
 }
