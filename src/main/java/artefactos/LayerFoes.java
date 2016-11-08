@@ -29,9 +29,9 @@ public class LayerFoes extends MapLayer {
 
     public void generateOrcs() {
         for (int i = 0; i < ORCS; i++) {
-           for (int j = 0;j < LINES; i++){
-               if (j%2 == 0);
-               this.objectos[4][j] = new Orc();
+           for (int j = 0;j < LINES; j++){
+               if (j%2 == 0)
+                this.objectos[4][j] = new Orc();
                    
            }
             
