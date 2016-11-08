@@ -2,6 +2,7 @@ package gui;
 
 import artefactos.LayerFoes;
 import artefactos.LayerOuro;
+import artefactos.LayerPocao;
 import artefactos.LayerTrees;
 import artefactos.LayerWater;
 import artefactos.MapLayer;
@@ -65,6 +66,7 @@ public class Map extends Panel {
                 //criar a layer new water
                 LayerWater water = new LayerWater();
                 LayerOuro ouro = new LayerOuro();
+               LayerPocao pocao = new LayerPocao();
                 
                 layers = new ArrayList();
                 layers.add(trees);
@@ -72,6 +74,7 @@ public class Map extends Panel {
                 //criar a layer water
                 layers.add(water);
                 layers.add(ouro);
+                layers.add(pocao);
                 
 		//generateTrees();
 
@@ -90,6 +93,20 @@ public class Map extends Panel {
 						graphics.setModifiers(EnumSet.of(SGR.BOLD));
 						graphics.fill(' ');
 					
+                                               /* 
+                                                private boolean isPositionAvaiable(TerminalPosition pos)
+                                                {
+                                                    if (pos.getColumn() < 0)
+                                                        return false;
+                                                    else if (pos.getColumn() > COLUMNS -1)
+                                                        return false;
+                                                    else if (pos.getRow() < 0)
+                                                        return false;
+                                                    else if (pos.getRow() > LINES -1)
+                                                        return false;
+                                                }
+                                                */
+                                                
                                             for (MapLayer ml : layers) {
                                                 for (int x = 0; x < COLUMNS; x++) {
                                                     for (int y = 0; y < LINES; y++) {

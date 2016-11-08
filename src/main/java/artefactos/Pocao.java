@@ -14,23 +14,16 @@ import gui.SymbolsMirk;
  *
  * @author Trainerpl022
  */
-public class Water2 extends MapObject {
-    TextColor.RGB foreColor = new RGB(51, 102, 255);
-    TextColor.RGB bkgColor = new RGB(100, 100, 255);
+public class Pocao extends MapObject {
     
-    
-    
-    public Water2(char symb) {
+    public Pocao() {
         super();
-         
-        setForegroundColor(foreColor);
-        setBackgroundColor(bkgColor);
-        setWalkthrough(true);
-        setSymbol(symb);
-    }
-   
+        setSymbol(SymbolsMirk.Pocao);
        
+        setForegroundColor(new TextColor.RGB(244, 66, 119));
+        setBackgroundColor(Map.bkgColor);
+        setWalkthrough(false);
         
+    }
       
 }
-

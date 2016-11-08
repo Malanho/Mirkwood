@@ -19,15 +19,22 @@ public class LayerFoes extends MapLayer {
 
     private final int ORCS = 10;
     private final int SPIDERS = 10;
+    
 
     public LayerFoes() {
         generateOrcs();
         generateSpiders();
+    
     }
 
     public void generateOrcs() {
         for (int i = 0; i < ORCS; i++) {
-            this.objectos[_rand.nextInt(COLUMNS)][_rand.nextInt(LINES)] = new Orc();
+           for (int j = 0;j < LINES; i++){
+               if (j%2 == 0);
+               this.objectos[4][j] = new Orc();
+                   
+           }
+            
         }
     }
 
@@ -36,6 +43,7 @@ public class LayerFoes extends MapLayer {
             this.objectos[_rand.nextInt(COLUMNS)][_rand.nextInt(LINES)] = new Spider();
             
         }
+     
+    
     }
-
 }
